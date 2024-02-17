@@ -15,10 +15,10 @@ const Upload = () => {
             e.preventDefault()
             setLoading(true)
             let response = await axios.get(URL)
-            setLoading(false)
             setSearch('')
             let url = response.config.url;
             console.log(url)
+            setLoading(false)
             setImgUrl(url)
 
         } catch (error) {
